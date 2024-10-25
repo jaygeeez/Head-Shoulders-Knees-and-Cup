@@ -3,7 +3,7 @@ var parts = ["head", "shoulders", "knees", "toes", "nose", "ears", "cup"];
 function roll() {
   var randomSeq = getRndInteger(1, 10);
   for (let i = 0; i < randomSeq; i++) {
-    //make this better
+    //make this better,
     setTimeout(() => {
       newPart();
     }, 1000);
