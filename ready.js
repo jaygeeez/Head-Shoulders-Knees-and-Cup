@@ -8,10 +8,11 @@ function roll() {
 
 function newPart() {
   var randomPart = getRndInteger(0, parts.length);
-  if (document.getElementById("insertLevel").innerHTML != "cup") {
-    document.getElementById("insertLevel").innerHTML = parts[randomPart];
+  if (document.getElementById("insertPart").innerHTML != "cup") {
+    document.getElementById("insertPart").innerHTML = parts[randomPart];
   } else {
-    console.log("done");
+    // Add a button to restart the game
+    document.getElementById("retry").innerHTML = "Click to try again.";
   }
 }
 
