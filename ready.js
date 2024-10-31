@@ -1,6 +1,8 @@
 var parts = ["head", "shoulders", "knees", "toes", "nose", "ears", "cup"];
 
 function roll() {
+  document.getElementById("insertPart").innerHTML = "";
+  document.getElementById("retry").innerHTML = "";
   var wordRefresh = setInterval(() => {
     newPart();
   }, 1000);
