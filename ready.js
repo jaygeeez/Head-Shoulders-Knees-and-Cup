@@ -1,8 +1,9 @@
 var parts = ["head", "shoulders", "knees", "toes", "nose", "ears", "cup"];
 
 function roll() {
-  document.getElementById("insertPart").innerHTML = "";
-  document.getElementById("retry").innerHTML = "";
+  document.getElementById("insertPart").innerHTML = ""; // clear text to reroll
+  document.getElementById("retry").innerHTML = ""; // disable the button
+
   var wordRefresh = setInterval(() => {
     var randomPart = getRndInteger(0, parts.length);
     if (document.getElementById("insertPart").innerHTML != "cup") {
@@ -13,7 +14,7 @@ function roll() {
       console.log("done");
       clearInterval(wordRefresh);
     }
-  }, getRndInteger(500, 2000));
+  }, 500);
 }
 
 function getRndInteger(min, max) {
