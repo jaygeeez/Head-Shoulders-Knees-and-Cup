@@ -1,4 +1,18 @@
-var parts = ["head", "shoulders", "knees", "toes", "nose", "ears", "cup"];
+var parts = [
+  "head",
+  "shoulders",
+  "knees",
+  "toes",
+  "nose",
+  "ears",
+  "hips",
+  "back",
+  "cup",
+];
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 function roll() {
   document.getElementById("insertPart").innerHTML = ""; // clear text to reroll
@@ -10,13 +24,8 @@ function roll() {
       document.getElementById("insertPart").innerHTML = parts[randomPart];
     } else {
       // Add a button to restart the game
-      document.getElementById("retry").innerHTML = "Click to try again.";
-      console.log("done");
+      document.getElementById("retry").innerHTML = "Try again.";
       clearInterval(wordRefresh);
     }
-  }, 500);
-}
-
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  }, 1000);
 }
